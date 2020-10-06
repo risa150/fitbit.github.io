@@ -22,8 +22,10 @@ xhr.onload = () => {
 }
 xhr.send('');
 const bpms1 = [97,98,99,100,101,102];
-document.write('bpms     : ' + bpms );
-document.write('bpm1     : ' + bpm1 );
+alert(bpms);
+alert(bpms1);
+//document.write('bpms     : ' + bpms <br>);
+//document.write('bpm1     : ' + bpm1 );
 
 /* ---------------------- */
 
