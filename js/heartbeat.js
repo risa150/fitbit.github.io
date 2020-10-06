@@ -28,7 +28,7 @@ document.write('bpms     : ' + bpms );
 
 var bpm = bpms[0];
 var bpm1 = bpms1[0];
-document.write('bpms1     : ' + bpm1 );
+document.write('bpm1     : ' + bpm1 );
 var count = 0;
 var timer = null;
 
