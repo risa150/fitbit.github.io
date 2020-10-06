@@ -18,10 +18,10 @@ xhr.open('GET', 'http://54.248.228.235/index.txt', false);
 xhr.responseType = 'text';
 xhr.onload = () => {
   //data = atob(xhr.response);
-  const bpms = (xhr.response.slice(0, -1) ).split(',').map( str => parseInt(str, 10) );  // 配列に格納 ( 文字列 --> 数値 )
+  //const bpms = (xhr.response.slice(0, -1) ).split(',').map( str => parseInt(str, 10) );  // 配列に格納 ( 文字列 --> 数値 )
 }
 xhr.send('');
-//const bpms = [97,98,99,100,101,102,];
+const bpms = [97,98,99,100,101,102,];
 /* ---------------------- */
 
 
