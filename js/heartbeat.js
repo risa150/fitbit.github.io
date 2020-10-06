@@ -23,6 +23,7 @@ xhr.onload = () => {
 xhr.send('');
 const bpms1 = [97,98,99,100,101,102];
 document.write('bpms     : ' + bpms );
+
 /* ---------------------- */
 
 
