@@ -30,8 +30,14 @@ var request = new XMLHttpRequest();
 request.open('GET', 'http://54.248.228.235/index.txt', true);  // `false` で同期リクエストになる
 request.send(null);
 
-if (request.status === 200) {
-  console.log(request.responseText);
+request.onreadystatechange = function () {
+  if (this.readyState === 4 && this.status === 200) {
+    var response = this.response;
+    if (typeof response === "string") {
+      resoinse = Text.parse(response);
+      console.log(resoinse);
+    }
+  }
 }
 /* ---------------------- */
 
