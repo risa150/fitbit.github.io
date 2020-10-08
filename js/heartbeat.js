@@ -13,19 +13,26 @@ var beat = null; //心拍の音を入れる箱
 
 /* ----- 変更部分 ----- */
 var data = "87,88,";
-var xhr = new XMLHttpRequest(); 
-xhr.open('GET', 'http://54.248.228.235/index.txt', false);
-xhr.responseType = 'text';
-xhr.onload = () => {
+//var xhr = new XMLHttpRequest(); 
+//xhr.open('GET', 'http://54.248.228.235/index.txt', false);
+//xhr.responseType = 'text';
+//xhr.onload = () => {
   //data = atob(xhr.response);
-  const bpms = (xhr.response.slice(0, -1) ).split(',').map( str => parseInt(str, 10) );  // 配列に格納 ( 文字列 --> 数値 )
-}
-xhr.send('');
+//  const bpms = (xhr.response.slice(0, -1) ).split(',').map( str => parseInt(str, 10) );  // 配列に格納 ( 文字列 --> 数値 )
+//}
+//xhr.send('');
 const bpms1 = [97,98,99,100,101,102];
 
-document.write('bpms     : ' + typeof(bpms) + '<br>');
-document.write('bpm1     : ' + bpms1 + '<br>');
+//document.write('bpms     : ' + typeof(bpms) + '<br>');
+//document.write('bpm1     : ' + bpms1 + '<br>');
 
+var request = new XMLHttpRequest();
+request.open('GET', 'http://54.248.228.235/index.txt', false);  // `false` で同期リクエストになる
+request.send(null);
+
+if (request.status === 200) {
+  console.log(request.responseText);
+}
 /* ---------------------- */
 
 
