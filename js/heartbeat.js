@@ -30,7 +30,6 @@ var request = new XMLHttpRequest();
 request.open('GET', 'https://heart-rate-get.com', false);  // `false` で同期リクエストになる
 request.send(null);
 
-
 request.onreadystatechange = function () {
   if (this.readyState === 4 && this.status === 200) {
     var response = this.response;
