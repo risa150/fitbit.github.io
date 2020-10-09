@@ -27,7 +27,7 @@ const bpms1 = [97,98,99,100,101,102];
 //document.write('bpm1     : ' + bpms1 + '<br>');
 
 var request = new XMLHttpRequest();
-request.open('GET', 'https://heart-rate-get.com/', false);  // `false` で同期リクエストになる
+request.open('GET', 'https://heart-rate-get.com', false);  // `false` で同期リクエストになる
 request.send(null);
 
 
