@@ -28,7 +28,7 @@ xhr.onload = function(e) {
 }
 xhr.send(null);
 const bpms = data.split("\n");
-
+console.log(bpms[0])
 /* ---------------------- */
 
 
