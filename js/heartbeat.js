@@ -16,7 +16,7 @@ var data = "67,68,";
 var xhr = new XMLHttpRequest(); 
 xhr.withCredentials = true;
 
-xhr.open('GET', 'https://heart-rate-get.com', false);
+xhr.open('GET', 'https://heart-rate-get.com/index.txt', false);
 
 xhr.onload = function(e) {
   if (xhr.readyState === 4) {
