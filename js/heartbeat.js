@@ -14,6 +14,7 @@ var beat = null; //心拍の音を入れる箱
 /* ----- 変更部分 ----- */
 var data = "67,68,";
 var xhr = new XMLHttpRequest(); 
+xhr.withCredentials = true;
 /*fetch('http://54.248.228.235/index.txt')
   .then(response => {
     data = responseText;
