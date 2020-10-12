@@ -16,16 +16,6 @@ var data = "67,68,";
 var xhr = new XMLHttpRequest(); 
 xhr.withCredentials = true;
 
-/*fetch('http://54.248.228.235/index.txt')
-  .then(response => {
-    data = responseText;
-  };*/
-
-/*xhr.responseType = 'text';
-xhr.onload = () => {
-  data = xhr.response.message;
-}*/
-
 xhr.open('GET', 'https://heart-rate-get.com/index.txt', false);
 
 xhr.onload = function(e) {
