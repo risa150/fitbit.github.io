@@ -28,7 +28,7 @@ xhr.onload = function(e) {
 }
 xhr.send(null);
 
-const bpms = (data.response.slice(0, -1) ).split(',').map( str => parseInt(str, 10));
+const bpms = data;
 /* ---------------------- */
 
 
