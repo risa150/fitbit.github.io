@@ -22,6 +22,7 @@ xhr.onload = function(e) {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
       data = xhr.responseText;
+      console.log(data)
     }
   }
 }
