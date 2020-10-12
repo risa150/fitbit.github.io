@@ -27,8 +27,12 @@ xhr.onload = function(e) {
   }
 }
 xhr.send(null);
+const tempArray = data.split("\n");
+const bpms = new Array();
+for(var i = 0; i<tempArray.length;i++){
+  bpms[i] = tempArray[i].split(",");
+}
 
-const bpms = data;
 /* ---------------------- */
 
 
