@@ -23,6 +23,7 @@ var data = "67,68,";
       data = responseText;
     });
 
+
 /*xhr.responseType = 'text';
 xhr.onload = () => {
   data = xhr.response.message;
