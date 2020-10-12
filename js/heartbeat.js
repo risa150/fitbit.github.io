@@ -15,10 +15,13 @@ var beat = null; //心拍の音を入れる箱
 var data = "67,68,";
 //var xhr = new XMLHttpRequest(); 
 //xhr.withCredentials = true;
-fetch('https://heart-rate-get.com/index.txt')
-  .then(response => {
-    data = responseText;
-  });
+
+  fetch('https://heart-rate-get.com/index.txt', {
+    mode: 'cors',
+   })
+    .then(response => {
+      data = responseText;
+    });
 
 /*xhr.responseType = 'text';
 xhr.onload = () => {
