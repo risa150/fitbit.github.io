@@ -13,19 +13,19 @@ var beat = null; //心拍の音を入れる箱
 
 /* ----- 変更部分 ----- */
 var data = "67,68,";
-var xhr = new XMLHttpRequest(); 
-xhr.withCredentials = true;
-/*fetch('http://54.248.228.235/index.txt')
+//var xhr = new XMLHttpRequest(); 
+//xhr.withCredentials = true;
+fetch('https://heart-rate-get.com/index.txt')
   .then(response => {
     data = responseText;
-  };*/
+  });
 
 /*xhr.responseType = 'text';
 xhr.onload = () => {
   data = xhr.response.message;
 }*/
 
-xhr.open('GET', 'https://heart-rate-get.com/index.txt', false);
+/*xhr.open('GET', 'https://heart-rate-get.com/index.txt', false);
 
 xhr.onload = function(e) {
   if (xhr.readyState === 4) {
@@ -34,7 +34,7 @@ xhr.onload = function(e) {
     }
   }
 }
-xhr.send(null);
+xhr.send(null);*/
 
 const bpms = (data.response.slice(0, -1) ).split(',').map( str => parseInt(str, 10));
 /* ---------------------- */
