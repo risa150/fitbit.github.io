@@ -12,34 +12,30 @@ var noteLength = 0.05;  //ビープ音の長さ(秒単位)
 var beat = null; //心拍の音を入れる箱
 
 /* ----- 変更部分 ----- */
-var data = "87,88,";
-//var xhr = new XMLHttpRequest(); 
-//xhr.open('GET', 'http://54.248.228.235/index.txt', false);
-//xhr.responseType = 'text';
-//xhr.onload = () => {
-  //data = atob(xhr.response);
-//  const bpms = (xhr.response.slice(0, -1) ).split(',').map( str => parseInt(str, 10) );  // 配列に格納 ( 文字列 --> 数値 )
-//}
-//xhr.send('');
-const bpms1 = [97,98,99,100,101,102];
+var data = "67,68,";
+var xhr = new XMLHttpRequest(); 
+/*fetch('http://54.248.228.235/index.txt')
+  .then(response => {
+    data = responseText;
+  };*/
 
-//document.write('bpms     : ' + typeof(bpms) + '<br>');
-//document.write('bpm1     : ' + bpms1 + '<br>');
+/*xhr.responseType = 'text';
+xhr.onload = () => {
+  data = xhr.response.message;
+}*/
 
-var request = new XMLHttpRequest();
-request.open('GET', 'https://heart-rate-get.com/index.txt', false);  // `false` で同期リクエストになる
-request.send(null);
+xhr.open('GET', 'https://heart-rate-get.com/index.txt', false);
 
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4 && this.status === 200) {
-    var response = this.response;
-    if (typeof response === "string") {
-      resoinse = Text.parse(response);
-      console.log(resoinse);
+xhr.onload = function(e) {
+  if (xhr.readyState === 4) {
+    if (xhr.status === 200) {
+      data = xhr.responseText;
     }
   }
 }
+xhr.send(null);
+
+const bpms = (data.response.slice(0, -1) ).split(',').map( str => parseInt(str, 10));
 /* ---------------------- */
 
 
